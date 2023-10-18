@@ -1,0 +1,36 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.artcom.project-setup-tool/Editor/UI/SetupWindow.uss?fileID=7433441132597879392&amp;guid=bb48eee07ae0347baac0b2aa59763d75&amp;type=3#SetupWindow" />
+    <ui:Label text="Project Setup" name="header" style="-unity-text-align: upper-center; font-size: 24px; margin-bottom: 15px;" />
+    <ui:ScrollView>
+        <ui:TextField picking-mode="Ignore" label="Root namespace" name="root-namespace-field" value="CompanyName.ProjectName" style="margin-bottom: 8px;" />
+        <ui:VisualElement name="options" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+            <ui:Foldout text="Folder Structure Options" name="options__folder-structure" class="foldout">
+                <ui:Toggle label="Include UI Toolkit Folders" name="include-ui-toolkit-folders-toggle" />
+                <ui:Toggle label="Include Testing Folders" name="include-testing-folders-toggle" />
+                <ui:Label text="Assets&#10;├─ 3rdParty&#10;├─ Audio&#10;│   ├─ Music&#10;│   └─ Sound&#10;├─ Graphics&#10;│   ├─ Animations&#10;│   ├─ Fonts&#10;│   ├─ Materials&#10;│   ├─ Models&#10;│   ├─ ShaderGraphs&#10;│   ├─ Sprites&#10;│   ├─ Textures&#10;│   └─ VFX&#10;├─ Plugins&#10;├─ Prefabs&#10;├─ Resources&#10;├─ Scenes&#10;├─ Settings&#10;│   ├─ Input&#10;│   ├─ RenderPipeline&#10;└─ Source&#10;       ├─ Scripts&#10;       │   ├─ Editor&#10;       │   ├─ Runtime&#10;       ├─ Shaders" name="folder-structure__preview" style="background-color: rgba(144, 144, 144, 0.25); margin-right: 15px; font-size: 10px; margin-top: 5px; margin-bottom: 5px;" />
+            </ui:Foldout>
+            <ui:Foldout text="Recommended Project Settings" name="options__project-settings" class="foldout">
+                <ui:Toggle label="Disable Prefab Auto Save" value="true" name="disable-prefab-auto-save-toggle" />
+                <ui:Toggle label="Enable Parallel Asset Import" value="true" name="enable-parallel-import-toggle" />
+                <ui:Toggle label="Enable Enter Play Mode Options" name="enable-playmode-options-toggle" />
+                <ui:DropdownField label="Sprite Packer Mode" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="sprite-packer-mode-dropdown" />
+                <ui:DropdownField label="Game Object Naming" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="game-object-naming-dropdown" />
+                <ui:SliderInt picking-mode="Ignore" label="Game Object Digits" value="1" high-value="3" name="game-object-digits-slider" low-value="1" show-input-field="true" />
+            </ui:Foldout>
+            <ui:Foldout text="Install helpful packages" name="options__packages" class="foldout">
+                <ui:Toggle label="UniTask" name="unitask-toggle" />
+                <ui:Toggle label="MemoryPack" name="memorypack-toggle" />
+                <ui:Toggle label="Graphy" name="graphy-toggle" />
+            </ui:Foldout>
+            <ui:Foldout text="Git Setup Options" name="options__git" class="foldout">
+                <ui:Toggle label="Create Repository" name="create-repository-toggle" />
+                <ui:Toggle label="Use Git LFS" name="use-lfs-toggle" />
+                <ui:TextField picking-mode="Ignore" label="Remote URL" name="remote-url-field" tooltip="Leave empty to keep repository local" />
+            </ui:Foldout>
+            <ui:VisualElement name="buttons" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; justify-content: center; align-items: flex-end; margin-top: 10px;">
+                <ui:Button text="Execute Setup" display-tooltip-when-elided="true" name="buttons__execute" />
+                <ui:Button text="Cancel" display-tooltip-when-elided="true" name="buttons__cancel" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:ScrollView>
+</ui:UXML>

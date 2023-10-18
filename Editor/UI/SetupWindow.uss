@@ -1,0 +1,16 @@
+.custom-label {
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: rgb(68, 138, 255);
+}
+
+.foldout {
+}
+
+.foldout .unity-foldout__text {
+    -unity-font-style: bold;
+}
+
+.foldout .unity-foldout__content {
+    padding-bottom: 10px;
+}

@@ -1,0 +1,26 @@
+{
+    "name": "ArtCom.ProjectSetupTool.Editor.Tests",
+    "rootNamespace": "ArtCom.ProjectSetupTool",
+    "references": [
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "BoundfoxStudios.FluentAssertions",
+        "UniTask",
+        "ArtCom.ProjectSetupTool.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
